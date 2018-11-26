@@ -82,10 +82,10 @@ word_features = list(all_words)
 featuresets = [(find_features(tweet), category) for (tweet, category) in documents]
 
 # TRAINING SET
-training_set = featuresets[:420]
+training_set = featuresets[:840]
 
 # TESTING SET
-testing_set = featuresets[420:840]
+#testing_set = featuresets[820:840]
 
 # PREDICTION SET
 prediction_set = featuresets[840:]
