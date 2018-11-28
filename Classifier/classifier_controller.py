@@ -24,7 +24,10 @@ def classifty():
     if request.method == 'POST':
         try:
             tweet_url = request.form['tweet']
-            tweet = rt.find_tweet(tweet_url)
+            try:
+                tweet = rt.find_tweet(tweet_url)
+            except:
+                tweet = tweet_url
             gender_num = classifier.classify(tweet)
             if gender_num == 0:
                 gender = "Male"
